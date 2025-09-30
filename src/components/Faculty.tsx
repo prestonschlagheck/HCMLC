@@ -28,10 +28,10 @@ function FacultyPlaceholder({ index }: FacultyPlaceholderProps) {
           {/* Placeholder Text */}
           <div className="text-center">
             <h3 className="heading-font font-semibold text-slate-400 text-sm leading-tight mb-1">
-              Expert Placeholder
+              HCM Expert Placeholder
             </h3>
             <div className="text-xs font-medium text-slate-300">
-              To Be Added
+              This is a placeholder title
             </div>
           </div>
         </div>
@@ -61,10 +61,10 @@ export function Faculty() {
             className="text-center mb-8"
           >
             <h2 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900">
-              Faculty <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Directory</span>
+              Expert <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Faculty</span>
             </h2>
             <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
-              Placeholder grid for all faculty from included activities. Replace with names, titles, affiliations, and photos.
+              Leading HCM specialists and researchers from around the world. This is placeholder text for expert faculty profiles.
             </p>
           </motion.div>
 
@@ -87,10 +87,10 @@ export function Faculty() {
             className="text-center mb-8"
           >
             <h2 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900">
-              Faculty <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Directory</span>
+              Expert <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Faculty</span>
             </h2>
             <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
-              Placeholder grid for all faculty from included activities. Replace with names, titles, affiliations, and photos.
+              Leading HCM specialists and researchers from around the world. This is placeholder text for expert faculty profiles.
             </p>
           </motion.div>
 

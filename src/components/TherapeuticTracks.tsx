@@ -23,9 +23,9 @@ export function TherapeuticTracks() {
   const isInView = useInView(ref, { once: true })
 
   const tracks: TrackCardProps[] = [
-    { title: 'CETP Track', description: 'Content hub for CETP-focused programs (e.g., obicetrapib) and future New Amsterdam/Menarini content.', icon: <Heart size={18} className="text-blue-700" /> },
-    { title: 'FCS / SHTG Track', description: 'Education on APOC3 inhibition and severe hypertriglyceridemia including FCS clinical insights.', icon: <Beaker size={18} className="text-blue-700" /> },
-    { title: 'LDL-C Optimization', description: 'Strategies and novel agents for LDL-C lowering across diverse patient populations.', icon: <Layers size={18} className="text-indigo-700" /> },
+    { title: 'Medical Therapy Track', description: 'Comprehensive education on pharmacological approaches including beta-blockers, calcium channel blockers, and novel myosin inhibitors.', icon: <Heart size={18} className="text-blue-700" /> },
+    { title: 'Diagnostic & Risk Assessment Track', description: 'Advanced imaging techniques, genetic testing protocols, and risk stratification strategies for HCM patients.', icon: <Beaker size={18} className="text-blue-700" /> },
+    { title: 'Interventional & Surgical Track', description: 'Surgical myectomy, alcohol septal ablation, ICD implantation, and heart transplantation considerations.', icon: <Layers size={18} className="text-indigo-700" /> },
   ]
 
   return (

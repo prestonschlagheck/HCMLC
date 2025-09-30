@@ -3,14 +3,14 @@ import type { Metadata, Viewport } from 'next'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
-  title: 'Lipid 360° Learning Center | Evidence-Based Lipid Management',
-  description: 'Your comprehensive hub for advancing evidence-based care in lipid management. Explore expert interviews, interactive cases, multidisciplinary panels, and patient perspectives across LDL-C, Lp(a), severe hypertriglyceridemia, and rare genetic disorders.',
-  keywords: 'lipids, dyslipidemia, LDL-C, Lp(a), hypertriglyceridemia, familial chylomicronemia syndrome, FCS, ASCVD, cardiology, endocrinology, CME',
-  authors: [{ name: 'Lipid 360° Learning Center' }],
+  title: 'Rhythm & Remodeling: Comprehensive HCM Education | HCM Learning Center',
+  description: 'Your comprehensive hub for excellence in HCM health education. Through expert interviews, interactive case discussions, and patient perspectives, we provide healthcare professionals with evidence-based, practical, and patient-centered learning for Hypertrophic Cardiomyopathy.',
+  keywords: 'hypertrophic cardiomyopathy, HCM, cardiology, heart disease, cardiac remodeling, rhythm disorders, cardiovascular education, CME, BMS, Cytokinetics',
+  authors: [{ name: 'HCM Learning Center' }],
   robots: 'index, follow',
   openGraph: {
-    title: 'Lipid 360° Learning Center | Evidence-Based Lipid Management',
-    description: 'Advancing evidence-based care in lipid management with expert insights and practical strategies.',
+    title: 'Rhythm & Remodeling: Comprehensive HCM Education',
+    description: 'Advancing knowledge, competence, and clinical excellence in the care of patients with Hypertrophic Cardiomyopathy.',
     type: 'website',
     locale: 'en_US',
     images: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
         url: '/output (1).png',
         width: 1200,
         height: 630,
-        alt: 'Lipid 360 visual'
+        alt: 'HCM Learning Center visual'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lipid 360° Learning Center | Evidence-Based Lipid Management',
-    description: 'Your comprehensive hub for advancing evidence-based care in lipid management.',
+    title: 'Rhythm & Remodeling: Comprehensive HCM Education',
+    description: 'Your comprehensive hub for excellence in HCM health education.',
   }
 }
 

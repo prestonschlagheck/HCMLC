@@ -11,9 +11,9 @@ export function NewsPrograms() {
   const isInView = useInView(ref, { once: true })
 
   const items: NewsItem[] = [
-    { title: 'PACE-CME: Clinical choices in managing LDL-C (2024)', href: 'https://pace-cme.org/programs/cme/clinical-choices-in-managing-ldl-c-where-do-novel-therapies-fit-in/26362/', source: 'PACE-CME' },
-    { title: 'PACE-CME: Exploring CETP as a therapeutic target (2024)', href: 'https://pace-cme.org/programs/cme/innovating-the-clinical-management-of-ldl-c-exploring-cetp-as-therapeutic-target/24557/', source: 'PACE-CME' },
-    { title: 'ReachMD: Transforming cardiovascular care', comingSoon: true },
+    { title: 'HCM Diagnosis and Risk Stratification Updates', comingSoon: true, source: 'HCM Learning Center' },
+    { title: 'Novel Myosin Inhibitors in HCM Management', comingSoon: true, source: 'HCM Learning Center' },
+    { title: 'Surgical and Interventional Approaches to HCM', comingSoon: true, source: 'HCM Learning Center' },
   ]
 
   return (

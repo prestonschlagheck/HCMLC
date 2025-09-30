@@ -1,14 +1,12 @@
 {
-  "name": "impact-t1d",
+  "name": "hcm-learning-center",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:clean": "bash scripts/dev-clean.sh",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "clean": "rm -rf .next node_modules/.cache && npm cache clean --force"
+    "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.3.31",
@@ -21,6 +19,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "postcss": "^8",

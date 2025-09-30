@@ -3,8 +3,26 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Heart, Award } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 export function Header() {
+  const [isOverHero, setIsOverHero] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero-section');
+      if (heroSection) {
+        const heroRect = heroSection.getBoundingClientRect();
+        const headerHeight = 80;
+        setIsOverHero(heroRect.bottom > headerHeight && heroRect.top < headerHeight);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -18,12 +36,12 @@ export function Header() {
   };
 
   const navigationItems = [
-    { id: 'comprehensive-hub', label: 'Lipid 360°' },
-    { id: 'lipid-statistics', label: 'Lipid Statistics' },
+    { id: 'comprehensive-hub', label: 'HCM Learning Center' },
+    { id: 'hcm-statistics', label: 'HCM Statistics' },
     { id: 'activities', label: 'Activities' },
     { id: 'tracks', label: 'Tracks' },
     { id: 'resource-center', label: 'Resource Center' },
-    { id: 'faculty', label: 'Key Faculty' },
+    { id: 'faculty', label: 'Expert Faculty' },
     { id: 'news', label: 'News' }
   ];
 
@@ -48,7 +66,9 @@ export function Header() {
               alt="GLC Logo"
               width={120}
               height={36}
-              className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
+              className={`h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer ${
+                isOverHero ? 'brightness-0 invert' : ''
+              }`}
               priority
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             />
@@ -59,7 +79,11 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="hidden lg:flex items-center space-x-4 absolute right-4 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent"
+            className={`hidden lg:flex items-center space-x-4 absolute right-4 ${
+              isOverHero 
+                ? 'text-white' 
+                : 'bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent'
+            }`}
           >
             {navigationItems.map((item, index) => (
               <motion.button

@@ -16,33 +16,37 @@ export function ResourceCenter() {
       title: 'Guidelines & Consensus',
       icon: <Award size={18} className="text-blue-700" />,
       items: [
-        { title: 'AACE 2025 Clinical Practice Guideline for Dyslipidemia', href: 'https://pro.aace.com/clinical-guidance/2025-clinical-practice-guideline-pharmacologic-management-adults-dyslipidemia' },
-        { title: 'NLA: Managing Hypercholesterolemia in Adults >75 without ASCVD', href: 'https://www.lipid.org/nla/managing-hypercholesterolemia-adults-older-75-years-without-history-atherosclerotic' },
+        { title: 'AHA/ACC 2020 HCM Guideline', href: '#' },
+        { title: 'ESC 2023 Cardiomyopathy Guidelines', href: '#' },
+        { title: 'HRS Expert Consensus on ICDs in HCM', href: '#' },
       ]
     },
     {
-      title: 'Lp(a) & Risk',
+      title: 'Genetic Testing & Family Screening',
       icon: <Beaker size={18} className="text-teal-700" />,
       items: [
-        { title: 'EHJ: Lp(a) as causal ASCVD risk factor', href: 'https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehaf190/8234482' },
-        { title: 'NEJM: Trials and updates', href: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2415820' },
+        { title: 'HCM Genetic Testing Guidelines', href: '#' },
+        { title: 'Family Screening Protocols', href: '#' },
+        { title: 'Genetic Counseling Resources', href: '#' },
       ]
     },
     {
-      title: 'Hypercholesterolemia & Population Data',
+      title: 'Diagnostic Imaging & Assessment',
       icon: <Database size={18} className="text-indigo-700" />,
       items: [
-        { title: 'Lancet: Global hypercholesterolemia prevalence', href: 'https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00721-4/abstract' },
-        { title: 'Eur J Prev Cardiol: Dyslipidemia updates', href: 'https://academic.oup.com/eurjpc/advance-article/doi/10.1093/eurjpc/zwaf313/8152583' },
+        { title: 'Echocardiography in HCM', href: '#' },
+        { title: 'Cardiac MRI Guidelines', href: '#' },
+        { title: 'Exercise Testing Protocols', href: '#' },
       ]
     },
     {
-      title: 'Trials & Reviews',
+      title: 'Patient Care Tools & Resources',
       icon: <FileText size={18} className="text-slate-700" />,
       items: [
-        { title: 'NEJM: Cardiovascular outcomes updates', href: 'https://www.nejm.org/doi/10.1056/NEJMoa2409368' },
-        { title: 'J Clin Lipidol: 2025 featured articles', href: 'https://www.lipidjournal.com/article/S1933-2874(25)00317-4/fulltext' },
-        { title: 'PMC: Review articles', href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12186734/' },
+        { title: 'HCM Patient Education Materials', href: '#' },
+        { title: 'Exercise Recommendations', href: '#' },
+        { title: 'Pregnancy Management Guidelines', href: '#' },
+        { title: 'Athletic Participation Guidelines', href: '#' },
       ]
     },
   ]
@@ -75,7 +79,7 @@ export function ResourceCenter() {
             Resource <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Center</span>
           </h2>
           <p className="text-base lg:text-lg text-slate-700 max-w-4xl mx-auto leading-relaxed">
-            Curated links to guidelines, population data, Lp(a) insights, and trial updates. Links open in a new tab.
+            Curated links to HCM guidelines, genetic testing resources, diagnostic imaging protocols, and patient care tools. Links open in a new tab.
           </p>
         </motion.div>
 

@@ -26,10 +26,10 @@ export function Partners() {
           className="text-center"
         >
           <h2 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Faculty <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Directory</span>
+            Partner <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Network</span>
           </h2>
           <p className="text-base lg:text-lg text-slate-700 leading-relaxed mb-12 text-center lg:whitespace-nowrap">
-            Placeholder grid for all faculty from included activities. Replace with names, titles, affiliations, and photos.
+            Collaborative relationships in HCM care. This is placeholder text for partner organizations and institutions.
           </p>
 
           {/* Faculty Placeholder Grid */}
@@ -44,8 +44,8 @@ export function Partners() {
                       </div>
                     </div>
                     <div className="text-center">
-                      <h3 className="heading-font font-semibold text-slate-400 text-sm leading-tight mb-1">Faculty Name</h3>
-                      <div className="text-xs font-medium text-slate-300">Title & Affiliation</div>
+                      <h3 className="heading-font font-semibold text-slate-400 text-sm leading-tight mb-1">Partner Organization</h3>
+                      <div className="text-xs font-medium text-slate-300">This is placeholder text</div>
                     </div>
                   </div>
                 </div>

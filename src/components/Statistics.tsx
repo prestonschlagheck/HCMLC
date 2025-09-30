@@ -61,29 +61,43 @@ export function Statistics() {
   const statistics = [
     {
       icon: <TrendingUp size={28} className="text-blue-700" />,
-      value: "~50%",
-      description: "of high-risk patients fail to achieve LDL-C targets despite statin therapy.",
+      value: "1:500",
+      description: "adults affected by HCM per echocardiographic studies; estimated to be closer to 1:200.",
       color: "bg-gradient-to-br from-blue-50 to-blue-100",
-      cite: { label: "AACE 2025", href: "https://pro.aace.com/clinical-guidance/2025-clinical-practice-guideline-pharmacologic-management-adults-dyslipidemia" }
+      cite: { label: "Echocardiographic Studies", href: "#" }
     },
     {
       icon: <Globe2 size={28} className="text-blue-700" />,
-      value: "24.1%",
-      description: "global prevalence of hypercholesterolemia in adults (meta-analysis).",
+      value: "60%",
+      description: "of HCM patients have a known gene mutation of the sarcomere or sarcomere-related genes.",
       color: "bg-gradient-to-br from-blue-50 to-teal-50",
-      cite: { label: "Lancet 2025", href: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00721-4/abstract" }
+      cite: { label: "Genetic Studies", href: "#" }
     },
     {
       icon: <Heart size={28} className="text-blue-700" />,
-      value: "20–25%",
-      description: "of the global population has elevated Lp(a), an independent causal ASCVD risk factor.",
+      value: "25%",
+      description: "morphologic abnormalities found in first-degree relatives of patients with HCM.",
       color: "bg-gradient-to-br from-teal-50 to-teal-100",
-      cite: { label: "EHJ 2025", href: "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehaf190/8234482" }
+      cite: { label: "Family Studies", href: "#" }
+    },
+    {
+      icon: <Users size={28} className="text-blue-700" />,
+      value: "50%",
+      description: "of individuals with HCM may not experience any symptoms or only have mild symptoms.",
+      color: "bg-gradient-to-br from-cyan-50 to-cyan-100",
+      cite: { label: "Clinical Studies", href: "#" }
+    },
+    {
+      icon: <BarChart3 size={28} className="text-blue-700" />,
+      value: "#1",
+      description: "cause of sudden cardiac death in persons less than 35 years of age.",
+      color: "bg-gradient-to-br from-blue-50 to-blue-100",
+      cite: { label: "Cardiology Research", href: "#" }
     }
   ]
 
   return (
-    <section ref={ref} id="lipid-statistics" className="py-16 bg-gradient-to-br from-white via-slate-50/30 to-blue-50/20 relative overflow-hidden">
+    <section ref={ref} id="hcm-statistics" className="py-16 bg-gradient-to-br from-white via-slate-50/30 to-blue-50/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
         <motion.div
@@ -93,18 +107,30 @@ export function Statistics() {
           className="text-center mb-12"
         >
           <h2 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Lipid Disorders <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Global Statistics</span>
+            HCM Disease <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Statistics</span>
           </h2>
           <p className="text-base lg:text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
-            Key prevalence and treatment gap metrics across LDL-C, Lp(a), and hypercholesterolemia.
+            Key prevalence and clinical characteristics of Hypertrophic Cardiomyopathy.
           </p>
         </motion.div>
 
         {/* Statistics Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-2">
-          {statistics.map((stat, index) => (
-            <StatisticCard key={index} icon={stat.icon} value={stat.value} description={stat.description} index={index} color={stat.color} cite={stat.cite} />
-          ))}
+        <div className="space-y-6">
+          {/* Top Row - 3 cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {statistics.slice(0, 3).map((stat, index) => (
+              <StatisticCard key={index} icon={stat.icon} value={stat.value} description={stat.description} index={index} color={stat.color} cite={stat.cite} />
+            ))}
+          </div>
+          
+          {/* Bottom Row - 2 cards centered */}
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
+              {statistics.slice(3, 5).map((stat, index) => (
+                <StatisticCard key={index + 3} icon={stat.icon} value={stat.value} description={stat.description} index={index + 3} color={stat.color} cite={stat.cite} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

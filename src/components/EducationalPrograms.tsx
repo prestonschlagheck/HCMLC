@@ -53,42 +53,47 @@ export function EducationalPrograms() {
 
   const groups: ActivityGroup[] = [
     {
-      title: 'FCS & Severe Hypertriglyceridemia',
-      description: 'Therapeutic advances and unmet needs in APOC3 inhibition and FCS/SHTG.',
+      title: 'Diagnosis & Risk Assessment',
+      description: 'Comprehensive approaches to HCM diagnosis, genetic testing, and risk assessment.',
       icon: <Beaker size={20} className="text-blue-700" />,
       items: [
-        { title: 'Phase 3 study results of plozasiran in patients with FCS (Arrowhead)', comingSoon: true },
-        { title: 'APOC3 inhibition: New frontiers in managing patients with FCS & SHTG (CME)', href: 'https://reachmd.com/programs/cme/apoc3-inhibition-new-frontiers-managing-patients-with-fcs-shtg/20307/' },
-        { title: 'FCS & SHTG: Are we meeting the need? (CME)', href: 'https://reachmd.com/programs/cme/fcs-and-shtg-are-we-meeting-need/20306/' },
-        { title: 'Transforming cardiovascular care', comingSoon: true },
+        { title: 'Genetic testing in HCM: When and how to test', comingSoon: true },
+        { title: 'Echocardiographic assessment of HCM severity', comingSoon: true },
+        { title: 'Cardiac MRI in HCM: Advanced imaging techniques', comingSoon: true },
+        { title: 'Family screening protocols for HCM', comingSoon: true },
       ]
     },
     {
-      title: 'CETP Inhibition & Obicetrapib (ESC 2025)',
-      description: 'Efficacy and implications of CETP inhibition across diverse backgrounds.',
+      title: 'Medical Therapy & Novel Treatments',
+      description: 'Current and emerging pharmacological approaches to HCM management.',
       icon: <Heart size={20} className="text-blue-700" />,
       items: [
-        { title: 'Efficacy of obicetrapib across diverse regimens (BROOKLYN/BROADWAY pooled)', href: 'https://reachmd.com/clinical-practice/cardiology/efficacy-of-obicetrapib-across-diverse-background-lipid-lowering-regimens-pooled-broadway-brooklyn-analyses/36582/' },
-        { title: 'CETP inhibition & obicetrapib: A new era in lipid management', href: 'https://reachmd.com/clinical-practice/cardiology/cetp-inhibition-and-obicetrapib-a-new-era-in-lipid-management/37123/' },
-        { title: 'CETP inhibition: Implications for cardiovascular event prevention', href: 'https://reachmd.com/clinical-practice/cardiology/cetp-inhibition-with-obicetrapib-implications-for-cardiovascular-event-prevention/37124/' },
+        { title: 'Beta-blockers and calcium channel blockers in HCM', comingSoon: true },
+        { title: 'Mavacamten: Cardiac myosin inhibition therapy', comingSoon: true },
+        { title: 'Aficamten: Next-generation myosin inhibitors', comingSoon: true },
+        { title: 'Disopyramide for symptomatic HCM management', comingSoon: true },
       ]
     },
     {
-      title: 'LDL-C: Novel Therapies & Clinical Choices',
-      description: 'Placing novel agents in the LDL-C treatment landscape.',
+      title: 'Surgical & Interventional Care',
+      description: 'Surgical and interventional approaches to HCM treatment.',
       icon: <BookOpen size={20} className="text-blue-700" />,
       items: [
-        { title: 'Clinical choices in managing LDL-C: Where do novel therapies fit in? (CME)', href: 'https://pace-cme.org/programs/cme/clinical-choices-in-managing-ldl-c-where-do-novel-therapies-fit-in/26362/' },
-        { title: 'Exploring CETP as a therapeutic target (CME)', href: 'https://pace-cme.org/programs/cme/innovating-the-clinical-management-of-ldl-c-exploring-cetp-as-therapeutic-target/24557/' },
-        { title: 'Transforming cardiovascular care', comingSoon: true },
+        { title: 'Septal myectomy: Indications and outcomes', comingSoon: true },
+        { title: 'Alcohol septal ablation: Patient selection and technique', comingSoon: true },
+        { title: 'ICD implantation in HCM: Risk stratification', comingSoon: true },
+        { title: 'Heart transplantation in end-stage HCM', comingSoon: true },
       ]
     },
     {
-      title: "Women's Heart Health",
-      description: 'Focused lipid education for cardiovascular health in women.',
+      title: "Special Populations & Lifestyle",
+      description: 'HCM care considerations for specific patient populations and lifestyle modifications.',
       icon: <Heart size={20} className="text-blue-700" />,
       items: [
-        { title: 'LOVE STORY: Lipid Education for Women’s Heart Health (CME)', href: 'https://reachmd.com/programs/cme/love-story-lipid-education-for-womens-heart-health/26721/' },
+        { title: 'Pediatric HCM: Diagnosis and management', comingSoon: true },
+        { title: 'HCM in pregnancy: Maternal and fetal considerations', comingSoon: true },
+        { title: 'Exercise recommendations and activity restrictions', comingSoon: true },
+        { title: 'Athletic participation in HCM patients', comingSoon: true },
       ]
     },
   ]
@@ -111,11 +116,11 @@ export function EducationalPrograms() {
           className="text-center mb-16"
         >
           <h2 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Curated{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Activities</span>
+            Educational{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Programs</span>
           </h2>
           <p className="text-base lg:text-lg text-slate-700 max-w-6xl mx-auto leading-relaxed text-center">
-            Explore CME and clinical practice programs across FCS/SHTG, CETP/obicetrapib, LDL-C therapies, and women’s heart health.
+            Explore CME and clinical practice programs across HCM diagnosis, medical therapy, interventional management, and special populations.
           </p>
         </motion.div>
 

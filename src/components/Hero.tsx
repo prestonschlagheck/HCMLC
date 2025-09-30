@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Heart, Activity } from 'lucide-react'
+import { useState } from 'react'
 
 export function Hero() {
+  const [showHCM, setShowHCM] = useState(true) // Start with HCM heart visible
+  
   const scrollToWithOffset = (id: string) => {
     const el = document.getElementById(id)
     if (!el) return
@@ -11,8 +13,12 @@ export function Hero() {
     const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
+
+  const toggleHeart = () => {
+    setShowHCM(!showHCM)
+  }
   return (
-    <section className="relative h-[75vh] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+    <section id="hero-section" className="relative h-[75vh] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       {/* Sophisticated Background Patterns */}
       <div className="absolute inset-0">
         {/* Medical Grid Pattern */}
@@ -29,58 +35,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Animated Molecular Structures */}
-        <motion.div
-          animate={{
-            rotate: [0, 360],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-20 right-20 opacity-20"
-        >
-          <div className="relative w-32 h-32">
-            <div className="absolute top-0 left-1/2 w-3 h-3 bg-blue-400 rounded-full -translate-x-1/2" />
-            <div className="absolute top-1/2 right-0 w-3 h-3 bg-teal-400 rounded-full -translate-y-1/2" />
-            <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-cyan-400 rounded-full -translate-x-1/2" />
-            <div className="absolute top-1/2 left-0 w-3 h-3 bg-blue-300 rounded-full -translate-y-1/2" />
-            <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-white rounded-full -translate-x-1/2 -translate-y-1/2" />
-          </div>
-        </motion.div>
-
-        {/* Floating Medical Icons */}
-        <motion.div
-          animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-32 left-20 opacity-30"
-        >
-          <Heart size={24} className="text-blue-700" />
-        </motion.div>
-
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            x: [0, -8, 0]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-          className="absolute bottom-32 right-32 opacity-30"
-        >
-          <Activity size={28} className="text-teal-300" />
-        </motion.div>
 
         {/* Dynamic Gradient Overlays */}
         <motion.div
@@ -105,60 +59,124 @@ export function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex items-center h-full px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-12 items-center">
-          
-          {/* Text Content */}
-          <div className="text-left space-y-8">
-
-
-            {/* Main Title */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.1 }}
-              className="space-y-4"
-            >
-              <h1 className="heading-font text-4xl lg:text-5xl font-bold text-white leading-tight text-shadow-md">
-                Lipid 360° Learning Center:
-                <br />
-                <span className="bg-gradient-to-r from-blue-300 to-teal-300 bg-clip-text text-transparent whitespace-nowrap">
-                  Advancing Evidence-Based Care in Lipid Management
-                </span>
-              </h1>
-            </motion.div>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.15 }}
-              className="text-base lg:text-lg text-blue-100 leading-relaxed max-w-4xl font-sans"
-            >
-              Through expert interviews, interactive case discussions, multidisciplinary panels, and patient perspectives, leading global experts in cardiovascular medicine, lipidology, and endocrinology share the latest evidence alongside real-world clinical insights. Empower your team with practical strategies across LDL-C, lipoprotein(a), severe hypertriglyceridemia, and rare disorders like familial chylomicronemia syndrome.
-            </motion.p>
-
-
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.4 }}
-              className="flex items-center gap-4 pt-4"
-            >
-              <button 
-                onClick={() => scrollToWithOffset('activities')}
-                className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="flex items-center justify-between h-full">
+            
+            {/* Left Content */}
+            <div className="flex flex-col items-start justify-center space-y-8 max-w-3xl">
+              {/* Main Title */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
+                className="space-y-4"
               >
-                Explore Activities
-              </button>
-              <button 
-                onClick={() => scrollToWithOffset('resource-center')}
-                className="px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/60 text-white/90 hover:bg-white/10 hover:shadow-xl"
+                <h1 className="heading-font text-4xl lg:text-5xl font-bold text-white leading-tight text-shadow-md text-left">
+                  Rhythm & Remodeling:
+                  <br />
+                  <span className="bg-gradient-to-r from-blue-300 to-teal-300 bg-clip-text text-transparent whitespace-nowrap">
+                    Comprehensive HCM Education
+                  </span>
+                </h1>
+              </motion.div>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.15 }}
+                className="text-base lg:text-lg text-blue-100 leading-relaxed max-w-4xl font-sans text-left"
               >
-                Explore Resources
-              </button>
-            </motion.div>
+                Your Comprehensive Hub for Excellence in HCM Health Education. The Hypertrophic Cardiomyopathy (HCM) Learning Center is dedicated to advancing knowledge, competence, and clinical excellence in the care of patients with HCM. Through educational programs, including expert interviews, interactive case discussions, and patient perspectives, we provide healthcare professionals with evidence-based, practical, and patient-centered learning.
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.4 }}
+                className="flex items-center gap-4 pt-4"
+              >
+                <button 
+                  onClick={() => scrollToWithOffset('activities')}
+                  className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                >
+                  Explore Activities
+                </button>
+                <button 
+                  onClick={() => scrollToWithOffset('resource-center')}
+                  className="px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/60 text-white/90 hover:bg-white/10 hover:shadow-xl"
+                >
+                  Explore Resources
+                </button>
+                <button 
+                  onClick={toggleHeart}
+                  className="px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/60 text-white/90 hover:bg-white/10 hover:shadow-xl flex items-center gap-3"
+                >
+                  <span>{showHCM ? 'Show Healthy Heart' : 'Show HCM Heart'}</span>
+                  <motion.div
+                    animate={{
+                      x: [0, 8, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="text-white/80"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: 'rotate(28deg)' }}>
+                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                  </motion.div>
+                </button>
+              </motion.div>
+            </div>
+
+            {/* Right Side - Heart Animation */}
+            <div className="flex items-start justify-center w-[21.375rem] lg:w-[23.94rem] -mt-3">
+              <motion.button
+                onClick={toggleHeart}
+                className="relative cursor-pointer focus:outline-none"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                style={{ 
+                  transition: 'transform 0.1s ease-out'
+                }}
+              >
+                {/* Heart Image 1 - Healthy Heart */}
+                <motion.img
+                  src="/1.png"
+                  alt="Healthy Heart"
+                  className="w-[427.5px] h-[427.5px] lg:w-[513px] lg:h-[513px] object-contain pointer-events-none"
+                  animate={{
+                    opacity: showHCM ? 0 : 1
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut"
+                  }}
+                />
+                
+                {/* Heart Image 2 - HCM Heart */}
+                <motion.img
+                  src="/2.png"
+                  alt="HCM Heart"
+                  className="absolute inset-0 w-[427.5px] h-[427.5px] lg:w-[513px] lg:h-[513px] object-contain pointer-events-none"
+                  animate={{
+                    opacity: showHCM ? 1 : 0
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut"
+                  }}
+                />
+
+              </motion.button>
+            </div>
           </div>
         </div>
       </div>
