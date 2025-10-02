@@ -2,11 +2,13 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Heart, Award } from 'lucide-react'
+import { Heart, Award, LogOut } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { useAuth } from '../contexts/AuthContext'
 
 export function Header() {
   const [isOverHero, setIsOverHero] = useState(false);
+  const { logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,6 +99,22 @@ export function Header() {
                 {item.label}
               </motion.button>
             ))}
+            
+            {/* Logout Button */}
+            <motion.button
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.1 + navigationItems.length * 0.05 }}
+              onClick={logout}
+              className={`ml-4 px-3 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 cursor-pointer flex items-center gap-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 border border-red-500/30 ${
+                isOverHero 
+                  ? 'text-white' 
+                  : 'bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent hover:from-red-600 hover:to-red-700'
+              }`}
+            >
+              <LogOut size={16} className={isOverHero ? 'text-white' : 'text-red-600'} />
+              Logout
+            </motion.button>
           </motion.nav>
 
           {/* Mobile Menu Button - Right */}
