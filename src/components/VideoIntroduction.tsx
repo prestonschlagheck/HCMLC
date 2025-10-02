@@ -141,7 +141,7 @@ export function VideoIntroduction() {
                         }`}>
                           <IconComponent size={20} />
                         </div>
-                        <span className="font-medium">{category.title}</span>
+                        <span className="font-medium text-sm">{category.title}</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <span className="text-sm text-slate-500">{category.items.length}</span>

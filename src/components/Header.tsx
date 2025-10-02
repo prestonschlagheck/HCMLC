@@ -40,7 +40,6 @@ export function Header() {
   const navigationItems = [
     { id: 'comprehensive-hub', label: 'HCM Learning Center' },
     { id: 'hcm-statistics', label: 'HCM Statistics' },
-    { id: 'activities', label: 'Activities' },
     { id: 'tracks', label: 'Tracks' },
     { id: 'resource-center', label: 'Resource Center' },
     { id: 'faculty', label: 'Expert Faculty' },

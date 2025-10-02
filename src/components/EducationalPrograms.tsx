@@ -29,13 +29,13 @@ function ActivityCard({ group, index }: { group: ActivityGroup; index: number })
         <ul className="space-y-2 mt-1 px-5 py-4">
           {group.items.map((item, i) => (
             <li key={i} className="flex items-start justify-between">
-              <span className="text-slate-800 text-sm leading-snug pr-3">
+              <span className="text-slate-800 text-sm leading-snug pr-3 flex-1">
                 {item.title}
               </span>
               {item.comingSoon ? (
-                <span className="text-xs text-slate-400">Coming soon</span>
+                <span className="text-xs text-slate-400 whitespace-nowrap ml-2">Coming soon</span>
               ) : (
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 inline-flex items-center text-xs">
+                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 inline-flex items-center text-xs whitespace-nowrap ml-2">
                   Open <ExternalLink size={14} className="ml-1" />
                 </a>
               )}

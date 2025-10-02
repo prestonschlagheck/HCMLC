@@ -3,7 +3,6 @@
 import { Hero } from '../components/Hero'
 import { VideoIntroduction } from '../components/VideoIntroduction'
 import { Statistics } from '../components/Statistics'
-import { EducationalPrograms } from '../components/EducationalPrograms'
 import { ResourceCenter } from '../components/ResourceCenter'
 import { Partners } from '../components/Partners'
 import { TherapeuticTracks } from '../components/TherapeuticTracks'
@@ -27,7 +26,6 @@ function ProtectedApp() {
         <Hero />
         <VideoIntroduction />
         <Statistics />
-        <EducationalPrograms />
         <TherapeuticTracks />
         <ResourceCenter />
         <Partners />
