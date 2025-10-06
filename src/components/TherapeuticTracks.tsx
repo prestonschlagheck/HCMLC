@@ -23,7 +23,6 @@ export function TherapeuticTracks() {
   const isInView = useInView(ref, { once: true })
 
   const tracks: TrackCardProps[] = [
-    { title: 'Medical Therapy Track', description: 'Comprehensive education on pharmacological approaches including beta-blockers, calcium channel blockers, and novel myosin inhibitors.', icon: <Heart size={18} className="text-blue-700" /> },
     { title: 'Diagnostic & Risk Assessment Track', description: 'Advanced imaging techniques, genetic testing protocols, and risk stratification strategies for HCM patients.', icon: <Beaker size={18} className="text-blue-700" /> },
     { title: 'Interventional & Surgical Track', description: 'Surgical myectomy, alcohol septal ablation, ICD implantation, and heart transplantation considerations.', icon: <Layers size={18} className="text-indigo-700" /> },
   ]
@@ -34,7 +33,7 @@ export function TherapeuticTracks() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-center mb-8">
           <h2 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900">Therapeutic <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Tracks</span></h2>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-6 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 items-stretch">
           {tracks.map((t, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }}>
               <TrackCard {...t} />

@@ -7,25 +7,9 @@ import { Heart, Activity, Stethoscope, Shield, ChevronRight, CheckCircle } from 
 export function VideoIntroduction() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const [selectedCategory, setSelectedCategory] = useState<string>('medical-therapy')
+  const [selectedCategory, setSelectedCategory] = useState<string>('interventional')
 
   const categories = [
-    {
-      id: 'medical-therapy',
-      title: 'Medical Therapy',
-      icon: Heart,
-      color: 'blue',
-      bgColor: 'bg-blue-50',
-      borderColor: 'border-blue-200',
-      textColor: 'text-blue-700',
-      items: [
-        { name: 'Beta-Blockers', description: 'First-line therapy for symptom management' },
-        { name: 'Calcium Channel Blockers', description: 'Alternative symptom management approach' },
-        { name: 'Disopyramide', description: 'Negative inotropic agent for obstruction' },
-        { name: 'Mavacamten', description: 'Novel cardiac myosin inhibitor' },
-        { name: 'Aficamten', description: 'Next-generation myosin inhibitor' }
-      ]
-    },
     {
       id: 'interventional',
       title: 'Interventional & Surgical',

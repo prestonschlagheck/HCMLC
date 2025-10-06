@@ -64,17 +64,6 @@ export function EducationalPrograms() {
       ]
     },
     {
-      title: 'Medical Therapy & Novel Treatments',
-      description: 'Current and emerging pharmacological approaches to HCM management.',
-      icon: <Heart size={20} className="text-blue-700" />,
-      items: [
-        { title: 'Beta-blockers and calcium channel blockers in HCM', comingSoon: true },
-        { title: 'Mavacamten: Cardiac myosin inhibition therapy', comingSoon: true },
-        { title: 'Aficamten: Next-generation myosin inhibitors', comingSoon: true },
-        { title: 'Disopyramide for symptomatic HCM management', comingSoon: true },
-      ]
-    },
-    {
       title: 'Surgical & Interventional Care',
       description: 'Surgical and interventional approaches to HCM treatment.',
       icon: <BookOpen size={20} className="text-blue-700" />,
@@ -120,7 +109,7 @@ export function EducationalPrograms() {
             <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Programs</span>
           </h2>
           <p className="text-base lg:text-lg text-slate-700 max-w-6xl mx-auto leading-relaxed text-center">
-            Explore CME and clinical practice programs across HCM diagnosis, medical therapy, interventional management, and special populations.
+            Explore CME and clinical practice programs across HCM diagnosis, interventional management, and special populations.
           </p>
         </motion.div>
 
