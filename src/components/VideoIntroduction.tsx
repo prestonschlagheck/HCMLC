@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Heart, Activity, Stethoscope, Shield, ChevronRight, CheckCircle } from 'lucide-react'
+import { Heart, Activity, Stethoscope, Shield, ChevronRight, CheckCircle, Newspaper } from 'lucide-react'
 
 export function VideoIntroduction() {
   const ref = useRef(null)
@@ -178,6 +178,96 @@ export function VideoIntroduction() {
             </div>
           </motion.div>
         </div>
+
+        {/* CME Activities Section */}
+        <motion.div
+          id="activities"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16"
+        >
+          <div className="text-center mb-8">
+            <h3 className="heading-font text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+              CME <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Activities</span>
+            </h3>
+            <p className="text-base lg:text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              Access our comprehensive collection of continuing medical education activities designed to enhance your knowledge and skills in HCM management.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { 
+                title: 'Echocardiographic workup for HCM: making the diagnosis and evaluation of cardiac function', 
+                href: 'https://pace-cme.org/programs/cme/Echocardiographic-workup-for-HCM-making-the-diagnosis-and-evaluation-of-cardiac-function/32699/',
+                source: 'PACE-CME' 
+              },
+              { 
+                title: 'Role of echocardiography in risk stratification and treatment decision making', 
+                href: 'https://pace-cme.org/programs/cme/Role-of-echocardiography-in-risk-stratification-and-treatment-decision-making/32700/',
+                source: 'PACE-CME' 
+              },
+              { 
+                title: 'Understanding hypertrophic cardiomyopathy and recent guidelines', 
+                href: 'https://pace-cme.org/programs/cme/Understanding-hypertrophic-cardiomyopathy-and-recent-guidelines/32698/',
+                source: 'PACE-CME' 
+              },
+              { 
+                title: 'New Insights in the Management of HCM: Exploring the Clinical Spectrum', 
+                href: 'https://reachmd.com/programs/cme/new-insights-in-the-management-of-hcm-exploring-the-clinical-spectrum/33026/',
+                source: 'ReachMD CME' 
+              },
+              { 
+                title: 'Optimizing Outcomes in Patients with oHCM: The Emerging Role of Cardiac Myosin Inhibitors', 
+                href: 'https://reachmd.com/programs/cme/optimizing-outcomes-in-patients-with-ohcm-the-emerging-role-of-cardiac-myosin-inhibitors/33176/',
+                source: 'ReachMD CME' 
+              },
+              { 
+                title: 'Mavacamten in symptomatic non-obstructive HCM', 
+                href: 'https://pace-cme.org/congress-coverage/esc-congress-2025/mavacamten-in-symptomatic-non-obstructive-hcm/37860/',
+                source: 'PACE-CME' 
+              },
+              { 
+                title: 'MAPLE-HCM Results: Favorable Safety and Efficacy for Aficamten in oHCM', 
+                href: 'https://reachmd.com/clinical-practice/cardiology/maple-hcm-results-favorable-safety-and-efficacy-for-aficamten-in-ohcm/37255/',
+                source: 'ReachMD' 
+              },
+              { 
+                title: 'Aficamten improves peak oxygen uptake in obstructive HCM', 
+                href: 'https://pace-cme.org/topics/hypertrophic-cardiomyopathy/aficamten-improves-peak-oxygen-uptake-obstructive-hcm/26565/',
+                source: 'PACE-CME' 
+              },
+            ].map((activity, i) => (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 15 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.4, delay: i * 0.05 }} 
+                className="bg-white rounded-2xl border border-slate-200 p-5 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
+                    <Newspaper size={16} className="text-blue-700" />
+                  </div>
+                  <div className="text-slate-900 font-semibold text-sm">{activity.source}</div>
+                </div>
+                <div className="text-slate-800 text-sm leading-snug mb-3 font-medium">
+                  {activity.title}
+                </div>
+                <a 
+                  href={activity.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-600 hover:text-blue-700 text-xs font-semibold hover:underline"
+                >
+                  View Activity →
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

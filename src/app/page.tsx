@@ -4,9 +4,6 @@ import { Hero } from '../components/Hero'
 import { VideoIntroduction } from '../components/VideoIntroduction'
 import { Statistics } from '../components/Statistics'
 import { ResourceCenter } from '../components/ResourceCenter'
-import { Partners } from '../components/Partners'
-import { TherapeuticTracks } from '../components/TherapeuticTracks'
-import { NewsPrograms } from '../components/NewsPrograms'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Login } from '../components/Login'
@@ -26,10 +23,7 @@ function ProtectedApp() {
         <Hero />
         <VideoIntroduction />
         <Statistics />
-        <TherapeuticTracks />
         <ResourceCenter />
-        <Partners />
-        <NewsPrograms />
         <Footer />
       </div>
     </main>

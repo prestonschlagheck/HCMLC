@@ -38,12 +38,10 @@ export function Header() {
   };
 
   const navigationItems = [
-    { id: 'comprehensive-hub', label: 'HCM Learning Center' },
+    { id: 'comprehensive-hub', label: 'About' },
     { id: 'hcm-statistics', label: 'HCM Statistics' },
-    { id: 'tracks', label: 'Tracks' },
-    { id: 'resource-center', label: 'Resource Center' },
-    { id: 'faculty', label: 'Expert Faculty' },
-    { id: 'news', label: 'News' }
+    { id: 'activities', label: 'CME Activities' },
+    { id: 'resource-center', label: 'Resources' }
   ];
 
   return (
