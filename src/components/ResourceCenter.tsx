@@ -91,7 +91,7 @@ export function ResourceCenter() {
             Resource <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Center</span>
           </h2>
           <p className="text-base lg:text-lg text-slate-700 max-w-4xl mx-auto leading-relaxed">
-            Curated links to HCM guidelines, genetic testing resources, diagnostic imaging protocols, and patient care tools. Links open in a new tab.
+            Curated links to HCM guidelines, genetic testing resources, diagnostic imaging protocols, and patient care tools.
           </p>
         </motion.div>
 

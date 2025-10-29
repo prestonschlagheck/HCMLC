@@ -88,7 +88,7 @@ export function Hero() {
                 transition={{ duration: 0.2, delay: 0.15 }}
               className="text-sm sm:text-base text-blue-100 leading-relaxed font-sans px-2"
               >
-                Your Comprehensive Hub for Excellence in HCM Health Education. The HCM Learning Center provides healthcare professionals with evidence-based, practical learning.
+                The HCM Learning Center provides healthcare professionals with evidence-based, practical learning.
               </motion.p>
             </div>
 
@@ -214,7 +214,7 @@ export function Hero() {
                 transition={{ duration: 0.2, delay: 0.15 }}
                 className="text-base lg:text-lg text-blue-100 leading-relaxed max-w-4xl font-sans text-left"
               >
-                Your Comprehensive Hub for Excellence in HCM Health Education. The Hypertrophic Cardiomyopathy (HCM) Learning Center is dedicated to advancing knowledge, competence, and clinical excellence in the care of patients with HCM. Through educational programs, including expert interviews, interactive case discussions, and patient perspectives, we provide healthcare professionals with evidence-based, practical, and patient-centered learning.
+                Through educational programs, including expert interviews, interactive case discussions, and patient perspectives, we provide healthcare professionals with evidence-based, practical, and patient-centered learning.
               </motion.p>
 
               {/* CTA Buttons */}
